@@ -1,3 +1,9 @@
+/*
+ problem :  return the symmetric difference of two arrays
+    1. get union of two array
+    2. get symmetric array by comparing two arrays against the union array
+*/
+
 const diffArray = (arr1, arr2) => {
 
     const unionArray = [];
