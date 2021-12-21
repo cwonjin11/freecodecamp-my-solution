@@ -9,4 +9,5 @@
 4. Wherefore-art-thou
 
 
-## [Free Code Camp Javascript Algorithm page](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)
+## Link to Free code camp Javascript Algorithm Page
+(https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)
