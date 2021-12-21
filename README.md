@@ -3,5 +3,6 @@
 
 ## Currently added solution
 * Sum all numbers in a range
+* Diff Two Arrays
 
 
