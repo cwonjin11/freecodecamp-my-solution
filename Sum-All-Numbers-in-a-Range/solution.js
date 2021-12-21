@@ -1,5 +1,11 @@
 const sumAll = (arr) =>  {
   
+    // Refactoring : using ternary operator
+
+    const min = arr[0] < arr[1] ? arr[0] : arr[1]
+    const max = arr[0] > arr[1] ? arr[0] : arr[1]
+
+/*  
     // create varibles for max and min 
     let min, max
     
@@ -11,6 +17,7 @@ const sumAll = (arr) =>  {
         min = arr[0]
         max = arr[1]
     }
+*/
 
     // sum all elements in an array
 
