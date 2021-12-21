@@ -2,7 +2,8 @@
 * This is to expand my knowledge of Javascript DS&A problem solving skills.
 
 ## Currently added solution
-* Sum all numbers in a range
-* Diff Two Arrays
+1. Sum all numbers in a range
+2. Diff Two Arrays
+3. Seek and destroy
 
 
