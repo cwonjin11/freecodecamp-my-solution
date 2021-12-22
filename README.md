@@ -8,6 +8,12 @@
 3. Seek-and-Destroy
 4. Wherefore-art-thou
 5. Spinal-Tap-Case
+6. Pig-Latin
+
+8. DNA-Pairing
+9. Missing-Letters
+
+
 
 
 ## Link to Free code camp Javascript Algorithm Page
