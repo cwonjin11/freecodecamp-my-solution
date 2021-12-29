@@ -9,9 +9,11 @@
 4. Wherefore-art-thou
 5. Spinal-Tap-Case
 6. Pig-Latin
-
+7. 
 8. DNA-Pairing
 9. Missing-Letters
+10. Sorted-Union
+11. Convert-HTML-Entities
 
 
 
