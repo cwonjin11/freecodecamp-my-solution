@@ -9,7 +9,7 @@ function uniteUnique(arr) {
     const output = []
 
 
-    // quadratic big o notation : O to the n squre = O(n^2)
+    // quadratic big o notation : O to the n square = O(n^2)
     for(const arr of arrayOnlyValue){
         for(const element of arr){
             if(!output.includes(element)){

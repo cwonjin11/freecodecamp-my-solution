@@ -1,6 +1,6 @@
 const convertHTML = (str) => {
 
-    //create a varialbe output as empty string
+    //create a variable output as empty string
     let output = ''
 
     // for loop 
