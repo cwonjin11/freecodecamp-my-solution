@@ -1,8 +1,8 @@
 # freecodecamp-my-solution
-* This repo is intend to broaden my knowledge of Javascript Data Structure and Algorithm.
+* This repo is intend to broaden my knowledge of Javascript Data Structure and Algorithm. I am currently studying for DS&A by suing Javascript from freecodecamp website. These problems are intermediate level and you can find the link below.
 
 
-## Currently added solution
+## Solution added solution
 1. Sum-All-Numbers-in-a-Range
 2. Diff-Two-Arrays
 3. Seek-and-Destroy
@@ -14,6 +14,8 @@
 9. Missing-Letters
 10. Sorted-Union
 11. Convert-HTML-Entities
+12. Sum-All-Odd-Fibonacci-Numbers
+13. Sum-All-Primes
 
 
 
