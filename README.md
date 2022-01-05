@@ -16,6 +16,7 @@
 11. Convert-HTML-Entities
 12. Sum-All-Odd-Fibonacci-Numbers
 13. Sum-All-Primes
+14. Drop-it
 
 
 
