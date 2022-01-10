@@ -1,6 +1,8 @@
 function myReplace(str, before, after) {
 
+    // check if 'before' is capitalized or not. If capitalized, true, else, false
     const isCapitalized = before[0] >= 'A' && before[0] <= 'Z'
+    console.log(isCapitalized)
     
     let caseAfter
         //if 'after' is uppercase, 
