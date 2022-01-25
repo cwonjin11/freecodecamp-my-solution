@@ -12,7 +12,9 @@ function solution(N) {
        if(digit === '0'){
         currentGap++
        } else {
+           //compare maxGap against currentGap
            maxGap = Math.max(maxGap, currentGap)
+        //    console.log(maxGap, currentGap, "compare")
            currentGap = 0
         }
     }
