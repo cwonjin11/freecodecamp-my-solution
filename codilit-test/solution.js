@@ -1,6 +1,7 @@
 
 function solution(S)
 {
+    //object variable called 'one' that letter balloon as keys and value as number of the letter
         const one = {
           B: 1,
           A: 1,
