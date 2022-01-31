@@ -1,7 +1,7 @@
 const diffArray = (arr1, arr2) => {
 
-    const unionArray = new Set([...arr1, ...arr2]);
-console.log(unionArray)
+    const unionArray = new Set([...arr1, ...arr2]); //Set object(new Set) lets you store unique values of any type.
+    console.log(unionArray)  // => Set(5) { 1, 2, 3, 5, 4 }
 
     const solutionArray = []
     for (const currentElement of unionArray)
