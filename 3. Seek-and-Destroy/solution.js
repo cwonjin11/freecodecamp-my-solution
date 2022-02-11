@@ -18,7 +18,19 @@ function destroyer(arr) {
     return filteredArray
 
 }
-
+function findFirstDuplicate(arr) {
+    const uniques = new Set();
+  
+    for (const value of arr) {
+      if (uniques.has(value)) {
+        return value;
+      }
+  
+      uniques.add(value);
+    }
+  
+    return -1;
+  }
 
   
 console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));

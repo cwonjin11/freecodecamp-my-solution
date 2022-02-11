@@ -4,7 +4,7 @@ function uniteUnique(arr) {
     // console.log(...arguments)
     // => [ 1, 3, 2 ] [ 5, 2, 1, 4 ] [ 2, 1 ]
     const arrayOnlyValue = [...arguments]
-    // console.log(arrayOnlyValue)
+    console.log(arrayOnlyValue)
     //create variable of output as an empty array
     const output = []
 
@@ -24,5 +24,5 @@ function uniteUnique(arr) {
 }
   
   console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]))
-  console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
-  console.log(uniteUnique([1, 2, 3], [5, 2, 1]))
+//   console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
+//   console.log(uniteUnique([1, 2, 3], [5, 2, 1]))
