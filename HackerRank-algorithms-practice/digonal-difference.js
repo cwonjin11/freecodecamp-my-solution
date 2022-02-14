@@ -7,7 +7,7 @@
 // Their absolute difference is |15-17| = 2.
 
 function diagonalDifference(arr) {
-    let n = arr.length
+    let n = arr.length  // matrix length. e.g) 3*3, 4*4 etc
     let diagonal1 = 0
     let diagonal2 = 0
 
@@ -19,3 +19,4 @@ function diagonalDifference(arr) {
 }
 
 console.log(diagonalDifference([[1,2,3], [4,5,6], [9,8,9]]))  // => 2
+console.log(diagonalDifference([[1,2,3], [4,5,6], [0,8,9]]))  // => 0
