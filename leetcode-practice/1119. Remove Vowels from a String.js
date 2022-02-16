@@ -17,7 +17,7 @@ var removeVowels = function(s) {
 
     for(let i = 0; i < s.length; i++){
         if(!vowels.includes(s[i])) {
-            result[result.length] = s[i]
+            result.push(s[i])
         }
     }
     return result.join("")
