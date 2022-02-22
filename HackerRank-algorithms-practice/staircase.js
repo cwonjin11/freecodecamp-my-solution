@@ -11,17 +11,24 @@ function staircase(n) {
 
 
         
-        for(let i=0; i < n; i++){
-            let result = ''  // declare result variable inside the loop. why? cause no return outside the loop
-            for(let j=n-1; j > -1; j--){
-                if(i<j){
-                    result += ' '
-                } else {
-                    result += '#'
-                }
+        // for(let i=0; i < n; i++){
+        //     let result = ''  // declare result variable inside the loop. why? cause no return outside the loop
+        //     for(let j=n-1; j > -1; j--){
+        //         if(i<j){
+        //             result += ' '
+        //         } else {
+        //             result += '#'
+        //         }
+        //     }
+        //    console.log(result)  //not return result
+        // }
+
+        let result = ""
+            for(let i=0; i < n; i++){
+                result += "#"
+                console.log(result.padStart(n, " "))
             }
-           console.log(result)  //not return result
-        }
+       
 
 
 
