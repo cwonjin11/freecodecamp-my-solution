@@ -20,16 +20,20 @@ var canPermutePalindrome = function(s) {
     
     let hash = {}
     
+    // maintain chars that occur odd number of times
     for(const char of s){
         if(hash[char]){
             delete hash[char]
+           
         } else {
             hash[char] = 1
         }
     }
+     console.log(hash)
     return Object.keys(hash).length <=1 ? true : false
 };
 
-console.log(canPermutePalindrome("code")) // f
-console.log(canPermutePalindrome("aab")) // t
-console.log(canPermutePalindrome("carerac")) // t
+// console.log(canPermutePalindrome("code")) // f
+// console.log(canPermutePalindrome("aab")) // t
+console.log(canPermutePalindrome("aabc")) // f
+// console.log(canPermutePalindrome("carerac")) // t
