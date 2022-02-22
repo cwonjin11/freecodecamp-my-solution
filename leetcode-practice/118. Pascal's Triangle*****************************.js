@@ -28,6 +28,7 @@ var generate = function(numRows) {
     return pascal;
 };
 
+console.log(generate(4))
 // var generate = function(numRows) {
 //     var pascal = [];
 //     for (var i = 0; i < numRows; i++) {
