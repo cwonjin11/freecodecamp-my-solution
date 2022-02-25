@@ -29,6 +29,9 @@ var numKLenSubstrNoRepeats = function(s, k) {
 console.log(numKLenSubstrNoRepeats("havefunonleetcode", 5)) //6
 console.log(numKLenSubstrNoRepeats("home", 5)) //0
 
+
+
+// find subStr elements
 // var numKLenSubstrNoRepeats = function(s, k) {
     
 //     let output = []
