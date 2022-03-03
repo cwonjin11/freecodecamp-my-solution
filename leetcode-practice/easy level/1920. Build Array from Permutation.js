@@ -1,13 +1,12 @@
 
 // var buildArray = function(nums) {
 
-//     let result = []
-
+//     let ans = []
+    
 //     for(let i = 0; i < nums.length; i++){
-//         result[i] = nums[nums[i]]
+//         ans.push(nums[nums[i]])
 //     }
-//     return result
-
+//     return ans
 // };
 
 var buildArray = function(nums) {
