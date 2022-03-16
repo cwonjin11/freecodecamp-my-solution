@@ -9,19 +9,48 @@
 // Input: s = "aeiou"
 // Output: ""
 
+
+// var removeVowels = function(s) {
+    
+//     const vowels = "aeiou";
+//       return s.split("").filter(char => !vowels.includes(char)).join("")   
+//   };
+
 var removeVowels = function(s) {
     
-    let result = []
-    let vowels = ["a", "e", "i", "o", "u"]
-    // console.log(splitedS)
-
-    for(let i = 0; i < s.length; i++){
-        if(!vowels.includes(s[i])) {
-            result.push(s[i])
-        }
+    let vowelsHash = {
+        a: true,
+        e: true,
+        i: true,
+        o: true,
+        u: true
     }
-    return result.join("")
+
+    
+   let splittedString = s.split("")
+   let string = ""
+   for( let i = 0; i < splittedString.length; i++){
+       if(!vowelsHash[splittedString[i]]){
+           string += splittedString[i]
+       } 
+   }
+    return string
+    
 };
+
+// var removeVowels = function(s) {
+    
+//     let result = []
+//     let vowels = ["a", "e", "i", "o", "u"]
+//     // console.log(splitedS)
+
+//     for(let i = 0; i < s.length; i++){
+//         if(!vowels.includes(s[i])) {
+//             result.push(s[i])
+//         }
+//     }
+//     return result.join("")
+// };
 
 
 console.log(removeVowels("leetcodeisacommunityforcoders")) //"ltcdscmmntyfrcdrs"
