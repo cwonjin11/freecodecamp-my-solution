@@ -40,6 +40,12 @@ var containsDuplicate = function(nums) {
     return uniq.length !== nums.length
 };
 
+var containsDuplicate = function(nums) {
+    
+    let hashSet = new Set(nums)
+    return hashSet.size !== nums.length
+};
+
 
 var containsDuplicate = function(nums) {
     return new Set(nums).size < nums.length;
