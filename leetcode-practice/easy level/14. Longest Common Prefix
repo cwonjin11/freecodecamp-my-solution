@@ -23,7 +23,6 @@ var longestCommonPrefix = function(strs) {
         for(const s of strs){
             if(s[i] !== strs[0][i]){
                 // s.slice(0,i)  //end not included
-    //             //i==2
                 return s.slice(0,i)
             }
             
