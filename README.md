@@ -1,5 +1,5 @@
 # Javascript: Data Structure and Algoritm 
-* This repo is a collection of my Data Structure and Algorithm solutions using JavaScript. Problems are from the Leetcode, Hacker Ranks, and the Free-Code-Camp website. 
+* This repo is a collection of my Data Structure and Algorithm solutions using JavaScript. Problems are from the Leetcode, Hacker Ranks, and the Free-Code-Camp web page. 
 
 * I am trying to keep adding my solutions every day to expand my knowledge of Javascript and DS&A.
 
