@@ -11,7 +11,8 @@ function minimumNumber(n, password) {
     let lower = false
     let upper = false
     let special = false
-      let count = 0
+    let count = 0
+    
     for(let i = 0; i < password.length; i++){
         if(numbers.includes(password[i])){
             num = true
