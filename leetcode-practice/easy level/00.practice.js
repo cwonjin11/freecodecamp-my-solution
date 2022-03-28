@@ -33,10 +33,55 @@
 
 //=================================================================================
 // .map(Number) makes  elements of array as type of number
-let num = 1234
-let arr = num.toString().split("").map(Number)  
-for(let n of arr){
-   console.log(typeof n)
-}
+
+// let num = 1234
+// let arr = num.toString().split("").map(Number)  
+// for(let n of arr){
+//    console.log(typeof n)
+// }
 
 //=================================================================================
+
+
+
+//=================================================================================
+// const arr = new Array(10).fill("foo")
+// console.log(arr)
+
+// const arr = new Array(10)
+// console.log(arr)
+// const filled = [...arr].map(() => "foo" )
+// console.log(filled)
+//=================================================================================
+
+
+
+
+
+//=================================================================================
+ 
+// let arr = new Array(10)
+// const min = 0
+// const max = 9
+// let randomNumberArray = [...arr].map(() => Math.floor(Math.random() * (1 + max - min)) + min)
+// console.log(randomNumberArray)
+//=================================================================================
+
+
+const bubbleSort = (arr) => {
+
+   let swapped = true
+   while (swapped){
+      swapped = false
+      for(let i = 0; i < arr.length -1; i++){
+         if (arr[i] > arr[i + 1]) {
+         [arr[i], arr[i+1]] = [arr[i+1], arr[i]]
+         swapped = true
+         }
+      }
+   }
+   return arr
+
+}
+
+console.log(bubbleSort([2,1,5,4,6,8,9,7]))
