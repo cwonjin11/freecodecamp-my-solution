@@ -68,20 +68,27 @@
 //=================================================================================
 
 
-const bubbleSort = (arr) => {
+// const bubbleSort = (arr) => {
 
-   let swapped = true
-   while (swapped){
-      swapped = false
-      for(let i = 0; i < arr.length -1; i++){
-         if (arr[i] > arr[i + 1]) {
-         [arr[i], arr[i+1]] = [arr[i+1], arr[i]]
-         swapped = true
-         }
-      }
-   }
-   return arr
+//    let swapped = true
+//    while (swapped){
+//       swapped = false
+//       for(let i = 0; i < arr.length -1; i++){
+//          if (arr[i] > arr[i + 1]) {
+//          [arr[i], arr[i+1]] = [arr[i+1], arr[i]]
+//          swapped = true
+//          }
+//       }
+//    }
+//    return arr
 
-}
+// }
 
-console.log(bubbleSort([2,1,5,4,6,8,9,7]))
+// console.log(bubbleSort([2,1,5,4,6,8,9,7]))
+
+
+//repeat method returns new string which contains the specified number of copies
+// const repeatMethod = (s) => {
+//    return s.repeat(5)
+// }
+// console.log(repeatMethod("test string"))
