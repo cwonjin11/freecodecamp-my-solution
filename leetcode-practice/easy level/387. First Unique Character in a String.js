@@ -25,6 +25,14 @@ var firstUniqChar = function(s) {
         }
     }
     
+    // much faster than below code
+    // for(const key in hash){
+    //     if(hash[key] == 1){
+    //         return s.indexOf(key)
+    //     }
+    // }
+
+    //still works, readable
     for(let i = 0; i < s.length; i++){
         //   console.log(map[s[i]], "map[s[i]]")
         //   console.log(map)

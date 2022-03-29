@@ -49,6 +49,7 @@ var romanToInt = function(s) {
     // 1000 + (1000-100 = 900) +  1000 + ()
     let output = 0
    for(let i = 0; i < s.length; i++){
+     // hash[s[i]] < hash[s[i+1]] ? output -= hash[s[i]] : output += hash[s[i]]
       if(hash[s[i]] < hash[s[i+1]]){ // if roman symbol i is smaller than i+1 then substract from output // i가 i+1 작으면 i 를 빼 
           output -= hash[s[i]]   
         //   console.log(hash[s[i]]) //=> C, X, I 111
