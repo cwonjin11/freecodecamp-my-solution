@@ -21,6 +21,14 @@
 // Input: arr = [3,8,-10,23,19,-4,-14,27]
 // Output: [[-14,-10],[19,23],[23,27]]
 
+
+
+// sort the array
+// traversing the sorted array and find the diff of each pair
+// if diff is smailler than min diff, let result equals to this pair
+// if diff is equals to the min diff, add pair to the result array
+
+
 const minimumAbsDifference = (arr) => {
     let result = []
     arr.sort((a,b) => a -b)
@@ -29,8 +37,8 @@ const minimumAbsDifference = (arr) => {
     for(let i = 0; i < arr.length - 1; i++){
         let diff = arr[i+1] - arr[i]
         if( diff < minNum){
-            result = [ arr[i], arr[i+1] ]
             minNum = diff
+            result = [ arr[i], arr[i+1] ]
         } else if(diff === minNum) {
             result.push([arr[i], arr[i+1]])
         }
