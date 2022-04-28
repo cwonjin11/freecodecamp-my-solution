@@ -19,28 +19,52 @@
 // Explanation: The unique elements are [1,2,3,4,5], and the sum is 15.
 
 
+// var sumOfUnique = function(nums) {
+    
+//     let map = {}
+//     let sum = 0
+    
+//     for(const num of nums){
+//         // if(!map[num]){
+//         //     map[num] = 1
+//         // } else {
+//         //     map[num]++
+//         // }
+   //     // !map[num] ? map[num] = 1 : map[num]++
+//     }
+    
+//     for(const key in map){
+//         if(map[key] === 1) {
+//             // sum += parseInt(key)
+//             sum += +key
+//         }
+//     }
+//     return sum
+    
+// };
+
+// console.log(sumOfUnique([1,2,3,2]))
+
+
 var sumOfUnique = function(nums) {
     
-    let map = {}
-    let sum = 0
+    let hash = {}
     
     for(const num of nums){
-        // if(!map[num]){
-        //     map[num] = 1
-        // } else {
-        //     map[num]++
-        // }
-        !map[num] ? map[num] = 1 : map[num]++
-    }
-    
-    for(const key in map){
-        if(map[key] === 1) {
-            // sum += parseInt(key)
-            sum += +key
+        if(!hash[num]){
+            hash[num] = 1
+        } else {
+            hash[num]++
         }
     }
-    return sum
+   
+    let output = 0
+    for(const key in hash){
+        if(hash[key] == 1){
+            output += Number(key) // or output += +key  
+        }
+    }
+    return output
     
-};
-
-console.log(sumOfUnique([1,2,3,2]))
+}
+console.log(sumOfUnique([1,2,3,2])) // 1+3 = 4
