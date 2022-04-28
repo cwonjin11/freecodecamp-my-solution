@@ -9,17 +9,40 @@
 // Those numbers for which this process ends in 1 are happy.
 // Return true if n is a happy number, and false if not.
 
+// var isHappy = function(n) {
+
+//     let set = new Set()
+    
+//     while(!set.has(n)){
+//         set.add(n)
+//         console.log(set)
+//         let arr = n.toString()
+//         let sum = 0
+//         for( let i = 0; i < arr.length; i++){
+//             sum += Math.pow(arr[i], 2)
+//         }
+//         if(sum === 1){
+//             return true
+//         } else {
+//             n = sum
+//         }
+//     }
+   
+//     return false
+
+// };
+
 var isHappy = function(n) {
 
-    let set = new Set()
+    let set = new Set() // we use set in case we have endless loop 
     
     while(!set.has(n)){
         set.add(n)
         console.log(set)
-        let arr = n.toString()
+        let stringNumber = n.toString()
         let sum = 0
-        for( let i = 0; i < arr.length; i++){
-            sum += Math.pow(arr[i], 2)
+        for( let i = 0; i < stringNumber.length; i++){
+            sum += Math.pow(stringNumber[i], 2)
         }
         if(sum === 1){
             return true
@@ -27,13 +50,12 @@ var isHappy = function(n) {
             n = sum
         }
     }
-   
     return false
 
 };
 
-
 console.log(isHappy(19)) //true
+console.log(isHappy(20)) //false
 // console.log(isHappy(2))  //false
 
 
