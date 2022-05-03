@@ -36,3 +36,25 @@ var uniqueOccurrences = function(arr) {
 
 console.log(uniqueOccurrences([-3,0,1,-3,1,1,1,-3,10,0])) // true
 
+
+var uniqueOccurrences = function(arr) {
+    let hash = {}
+    for(const num of arr){
+        if(!hash[num]){
+            hash[num] = 1
+        } else {
+            hash[num]++
+        }
+    }
+    console.log(hash)
+    
+
+    let array = new Set()
+    for(const key in hash){
+        array.add(hash[key])
+    }
+    
+    return Object.keys(hash).length === array.size
+    
+};
+
