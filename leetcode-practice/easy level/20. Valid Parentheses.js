@@ -12,7 +12,6 @@ var isValid = function(s) {
                 stack.push(map[char])  //push value of char
             } else { // if close parentheses present
                 if (stack.pop() !== char)
-                
                     return false
             }   
         }
