@@ -8,3 +8,5 @@ const string =  (str) => {
 
 console.log(string("abcde")) // 
                   //01234      
+
+                  
