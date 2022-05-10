@@ -35,7 +35,7 @@ function meanderingArray(unsorted) {
     return output
 }
 
-console.log(meanderingArray([1, -1, -3, 9, -2, -5, 4, 8,]))
+console.log(meanderingArray([1, -1, -3, 9, -2, -5, 4, 8]))
 
 
 //input [7, 5, 2, 7, 8, -2, 25 ]  => 25 -2 25 2 8 5 7,7
