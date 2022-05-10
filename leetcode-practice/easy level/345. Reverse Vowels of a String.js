@@ -16,12 +16,27 @@
 
 var reverseVowels = function(s) {
   
-    // let result = []
-    // let vowels = ["a", "e", "i", "o", "u"]
+    const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+    s = s.split('');
 
-    // for (let i = 0; i < s.length; i++){
-    //     if()
-    // }
+    let start = 0
+    let end = s.length - 1
+
+    while(start < end){
+        if(vowels.includes(s[start]) && vowels.includes(s[end]) ){
+            [s[start], s[end]] = [s[end], s[start]] 
+            start++
+            end--
+        }else if(!vowels.includes(s[start])){
+            start++;
+        } else if(!vowels.includes(s[end])) {
+            end--;
+        }
+        
+    }
+    return s.join("")
+
+
 };
 
 console.log(reverseVowels("hello")) // "holle"
