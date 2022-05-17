@@ -56,8 +56,10 @@
     
     for(const num of nums){
         let i = index.shift()
-        // console.log(i)
+        console.log(i)
        result.splice(i, 0, num)
     }
     return result  
 };
+
+console.log(createTargetArray([1,2,3,4,0], [0,1,2,3,0])) //[0,1,2,3,4]
