@@ -2,14 +2,19 @@
 //https://app.codility.com/c/feedback/V6U722-VTH/
 
 var maxNumberOfBalloons = function(text) {
-  let map = {b:0, a:0, l:0, o:0, n:0};
-  for(let char of text){
-      map[char]++
-  }
-  let lCount = Math.floor(map["l"] / 2)
-  let oCount = Math.floor(map["o"] / 2)
-return Math.min(map["b"], map["a"], lCount, oCount, map["n"])
-};
+
+  let hash = {b:0, a:0, l:0, o:0, n:0}
+
+    for(let char of text){
+        hash[char]++
+    }
+  
+  let lCount = Math.floor(hash["l"] / 2)
+  let oCount = Math.floor(hash["o"] / 2)
+
+  return Math.min(hash["b"], hash["a"], lCount, oCount, hash["n"])
+
+}
 
 
 
