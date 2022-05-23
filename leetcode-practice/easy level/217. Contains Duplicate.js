@@ -32,21 +32,22 @@ var containsDuplicate = function(nums) {
     }
     return false
 };
+console.log(containsDuplicate([1,1,1,3,3,4,3,2,4,2]))
 
 // or
-var containsDuplicate = function(nums) {
+// var containsDuplicate = function(nums) {
     
-    const uniq = [...new Set(nums)]
-    return uniq.length !== nums.length
-};
+//     const uniq = [...new Set(nums)]
+//     return uniq.length !== nums.length
+// };
 
-var containsDuplicate = function(nums) {
+// var containsDuplicate = function(nums) {
     
-    let hashSet = new Set(nums)
-    return hashSet.size !== nums.length
-};
+//     let hashSet = new Set(nums)
+//     return hashSet.size !== nums.length
+// };
 
 
-var containsDuplicate = function(nums) {
-    return new Set(nums).size < nums.length;
-}
+// var containsDuplicate = function(nums) {
+//     return new Set(nums).size < nums.length;
+// }
