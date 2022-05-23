@@ -39,21 +39,46 @@
  * @param {ListNode} head
  * @return {boolean}
  */
- var hasCycle = function(head) {
-    
-    let hash = new Set()
-    
-    // if(!head || !head.next){
-    //     return false
-    // }
+
+const linkedListCycle = (head) => {
+
+    let set = new Set()
+
     while(head){
-        if(hash.has(head)){
+        if(set.has(head)){
             return true
-            break
-        }else{
-            hash.add(head)
-            head = head.next
         }
+        set.add(head)
+        head = head.next
     }
     return false
-};
+}
+
+
+
+
+
+
+
+
+
+
+
+//  var hasCycle = function(head) {
+    
+//     let hash = new Set()
+    
+//     // if(!head || !head.next){
+//     //     return false
+//     // }
+//     while(head){
+//         if(hash.has(head)){
+//             return true
+//             break
+//         }else{
+//             hash.add(head)
+//             head = head.next
+//         }
+//     }
+//     return false
+// };
