@@ -4,7 +4,7 @@
 const maxAverage = (arr) => {
 
     let hash = {}
-    let output = []
+    // let output = []
     for(let i = 0; i < arr.length; i++){
         let name = arr[i][0]
         let grade = Number(arr[i][1])
@@ -25,3 +25,4 @@ const maxAverage = (arr) => {
 }
 console.log(maxAverage([["Rachel", "100"], ["Pheobe", "80"], ["Monica", "95"], ["Rachel", "50"], ["Pheobe", "60"]]))
 console.log(maxAverage([["Rachel", "100"], ["Pheobe", "95"], ["Monica", "95"], ["Rachel", "50"], ["Pheobe", "95"], ["Pheobe", "100"]]))
+

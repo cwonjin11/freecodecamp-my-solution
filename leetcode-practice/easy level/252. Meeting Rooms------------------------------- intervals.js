@@ -1,7 +1,7 @@
 
 
 
-const canAttendMeetings = (intervals) => {
+const canAttends = (intervals) => {
 
     //sortedArray 
 
@@ -15,6 +15,6 @@ const canAttendMeetings = (intervals) => {
     return true
 }
 
-console.log(canAttendMeetings([[0,30],[5,10],[15,20]])) // false []
-console.log(canAttendMeetings([[5,10],[0,30],[15,20]])) // false []
-console.log(canAttendMeetings([[7,10],[2,4]])) //true
+console.log(canAttends([[0,30],[5,10],[15,20]])) // false []
+console.log(canAttends([[5,10],[0,30],[15,20]])) // false []
+console.log(canAttends([[7,10],[2,4]])) //true
