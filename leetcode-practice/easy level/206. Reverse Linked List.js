@@ -4,13 +4,9 @@
 //      this.next = (next===undefined ? null : next)
 //  }
 
-
-
 var reverseList = function(head) {
-    
     let prev = null // must store its previous element beforehand.
     let curr = head
-    
     while(curr){ //(curr !== null)
         let nextTemp = curr.next // need another pointer to store the next node before chaning the reference.
         curr.next = prev
@@ -18,15 +14,12 @@ var reverseList = function(head) {
         curr = nextTemp
     }
     return prev
-    
     // O(n), O(1);
 };
 
 
 // var reverseList = function(head) {
-    
 //     let prev = null
-
 //     while(head){ //head 1 2
 //         const next = head.next  //next = 2 3
 //         head.next = prev // 2 = prev  3 = prev
@@ -34,9 +27,7 @@ var reverseList = function(head) {
 //         head = next //head = 2 3
 //     }
 //     return prev
-    
 // }
-
 
 // const head = new ListNode(1);
 // const nodeB = head.next = new ListNode(2);
@@ -45,16 +36,13 @@ var reverseList = function(head) {
 // const nodeE = nodeD.next = new ListNode(5);
 // console.log(JSON.stringify(reverseList(head)));
 
-
 // console.log( ListNode([1,2,3,4,5]) )
 
 //same solution. time complexity: O(n) (how many time do we iterate over out input)
 // var reverseList = function(head) {
-
 //     let curr = head
 //     let prev = null
-//     let next = null
-    
+//     let next = null 
 //     while( curr !== null){
 //         next = curr.next
 //         curr.next = prev
@@ -62,6 +50,5 @@ var reverseList = function(head) {
 //         curr = next
 //     }
 //     return prev
-
 // };
 
