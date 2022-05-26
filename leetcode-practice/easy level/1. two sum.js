@@ -37,12 +37,13 @@ console.log(twoSum([2,7,11,15], 9)) //[0 , 1]
 
 
 
-
-// let hash = {}
-// for(let i = 0; i < nums.length; i++){
-//     let targetedNum = target - nums[i]
-//     if(targetedNum in hash){
-//         return [ hash[targetedNum], i ]
+// const twoSum = (nums, target) => {
+//     let hash = {}
+//     for(let i = 0; i < nums.length; i++){
+//         let targetedNum = target - nums[i]
+//         if(targetedNum in hash){
+//             return [ hash[targetedNum], i ]
+//         }
+//         hash[nums[i]] = i
 //     }
-//     hash[nums[i]] = i
 // }
