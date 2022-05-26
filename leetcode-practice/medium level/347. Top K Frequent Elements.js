@@ -54,5 +54,31 @@ var topKFrequent = function(nums, k) {
 
 };
 
-console.log(topKFrequent([1,1,1,2,2,3], 2))
-console.log(topKFrequent([1], 1))
+
+// or not using bucket
+// convert hash to array and then sort the elements of array by its frequency.
+//return kth top frequency
+
+
+var topKFrequent2 = function(nums, k) {
+    let hash = {}
+    for(let num of nums){
+        !hash[num] ? hash[num] = 1 : hash[num]++
+    }
+    console.log(hash)
+
+    let arr = []
+    for(const [key, value] of Object.entries(hash)){
+        arr.push([+key, value])
+    }
+    arr.sort((a,b) => (b[1] - a[1]))
+
+    let result = []
+    for(let i = 0; i < k; i++){
+        result.push(arr[i][0])
+    }
+    return result
+}
+
+console.log(topKFrequent2([1,1,1,2,2,3], 2))
+// console.log(topKFrequent2([1], 1))
