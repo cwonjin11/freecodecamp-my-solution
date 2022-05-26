@@ -1,10 +1,12 @@
-//Suppose I have "abbbccda" then it should return [1, 3]. Because it starts from index 1 and is 3 characters long. If the input string is empty then return [-1, 0].
+//Suppose I have "abbbccda" then it should return [1, 3]. 
+//Because it starts from index 1 and is 3 characters long. 
+// If the input string is empty then return [-1, 0].
 
 const findIdentical = (str) => {
 
     if(str.length == 0) return [-1, 0]
     if(str.length == 1) return [0, 1]
-    
+
     let idx = 0
     let maxCharCount = 0
     let count = 1
@@ -20,19 +22,14 @@ const findIdentical = (str) => {
             count = 1
         }
     }
-    
-    // if(count > maxCharCount){
-    //     maxCharCount = count;
-    //     idx = i - count
-    // }
-
+ 
    return [idx, maxCharCount]
 
 }
 
 console.log(findIdentical("")) // [2,5]
-console.log(findIdentical("1")) // [2,5]
-console.log(findIdentical("aabbbbbccddb")) // [2,5]
-console.log(findIdentical("10000111")) // [1,4]
-console.log(findIdentical("aabbbbbCdAA")) // [2,5]
-console.log(findIdentical("abaababaab")) // [
+console.log(findIdentical("1")) 
+console.log(findIdentical("aabbbbbccddb")) 
+console.log(findIdentical("10000111")) 
+console.log(findIdentical("aabbbbbCdAA")) 
+console.log(findIdentical("abaababaab")) 

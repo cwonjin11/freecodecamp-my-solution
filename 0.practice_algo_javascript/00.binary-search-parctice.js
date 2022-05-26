@@ -10,10 +10,8 @@ function iterativeFunction (arr, x) {
  
         // Find the mid index
         let mid=Math.floor((start + end)/2);
-
         // If element is present at mid, return True
         if (arr[mid]===x) return mid;
- 
         // Else look in left or right half accordingly
         else if (arr[mid] < x)
              start = mid + 1;

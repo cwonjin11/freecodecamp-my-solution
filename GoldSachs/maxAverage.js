@@ -15,7 +15,6 @@ const maxAverage = (data) => {
 
     let result = []
     for(const name in hash){
-        // let average = hash[name].reduce( (curr, acc) => curr + acc ) / hash[name].length
         let average = hash[name].reduce((acc,curr) => acc + curr) / hash[name].length
         let floorAverage = Math.floor(average)
         result.push(floorAverage)
