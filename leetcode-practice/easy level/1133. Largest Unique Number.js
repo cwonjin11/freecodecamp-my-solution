@@ -47,5 +47,25 @@ return maxNum
 }
 
 
+//or
+
+var largestUniqueNumber = function(nums) {
+    
+    let hash = {}
+    for(let num of nums){
+        !hash[num] ? hash[num] = 1 : hash[num]++
+    }
+   
+    let arr = []
+    for(let key in hash){
+        if(hash[key] === 1){
+            arr.push(+key)
+        }
+    }
+    arr.sort((a,b) => b-a)
+    return arr[0] || -1
+};
+
+
 console.log(largestUniqueNumber([5,7,3,9,4,9,8,3,1]))
 console.log(largestUniqueNumber([9,9,8,8]))
