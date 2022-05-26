@@ -17,10 +17,8 @@ c.next = d
 //return an array that takes all values of the nodes in the lined list
 
 const linkedListValues = (head) => {
-
     let curr = head
     let result = []
-
     while(curr){
         result.push(curr.val)
         curr = curr.next
@@ -28,4 +26,20 @@ const linkedListValues = (head) => {
     return result
 }
 
-console.log(linkedListValues(a))
+//or recursive version. Seperate recursive funtion for better time complexity
+const linkedListValues1 = (head) => {
+
+    let arr = []
+    fillValues(head, arr)
+    return arr
+}
+
+const fillValues = (head, arr) => {
+    if(head === null) return
+    arr.push(head.val)
+    fillValues(head.next, arr) 
+}
+
+
+console.log(linkedListValues(a))   // iterative version
+console.log(linkedListValues1(a))  // recursive version
