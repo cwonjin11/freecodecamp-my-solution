@@ -52,3 +52,36 @@ var reverseList = function(head) {
 //     return prev
 // };
 
+
+
+function ListNode(val, next) {
+     this.val = val
+     this.next =  null
+ }
+ 
+const A = new ListNode(1)
+const b = new ListNode(2)
+const c = new ListNode(3)
+const d = new ListNode(4)
+const e = new ListNode(5)
+
+A.next = b
+b.next = c
+c.next = d
+d.next = e
+
+
+var reverseList = function(head) {
+    let prev = null // must store its previous element beforehand.
+    let curr = head
+    while(curr){ //(curr !== null)
+        let nextTemp = curr.next // need another pointer to store the next node before chaning the reference.
+        curr.next = prev
+        prev = curr
+        curr = nextTemp
+    }
+    return prev
+    // O(n), O(1);
+};
+
+console.log(reverseList(A))

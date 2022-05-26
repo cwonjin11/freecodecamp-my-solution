@@ -14,24 +14,49 @@
 // }
 
 // Linear solution O(n)
+// var maxArea = function(height) {
+
+//     let result = 0
+//     let left = 0
+//     let right = height.length - 1
+
+//     while( left < right) {
+//             let area = (right - left) * Math.min(height[left], height[right]) // get area of rectangle
+//             result = Math.max(result, area) // get maximum area for the result
+//             if(height[left] > height[right]){
+//                 right--
+//             } else {
+//                left++
+//             }
+//     }
+
+//     return result
+// }
+
 var maxArea = function(height) {
 
+    // x-axis = index of arr
+    // y-axix = arr[index] or element
+
+    //x-axis
     let result = 0
     let left = 0
     let right = height.length - 1
 
-    while( left < right) {
-            let area = (right - left) * Math.min(height[left], height[right]) // get area of rectangle
-            result = Math.max(result, area) // get maximum area for the result
-            if(height[left] > height[right]){
-                right--
-            } else {
-               left++
-            }
+    while(left < right){
+        // define area calculation. x-axis * y-axis where min of y-axis. not max. if max, then overflow
+        let area = (right-left) * Math.min(height[right], height[left])
+        // update result with max area
+        result = Math.max(area, result)
+        // then, move pointers either left or right by below conditions
+        if(height[left] > height[right]) right--
+        else left++
+        
     }
-
     return result
+
 }
+
 
 
 

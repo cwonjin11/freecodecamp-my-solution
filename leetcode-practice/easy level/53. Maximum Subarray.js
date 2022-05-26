@@ -31,6 +31,25 @@ function maxSubArray(nums) {
 
 };
 
+
+// if current sum is less than 0, we don't need  negative sum. we set currens sum as 0 again and add next element
+// compare current sum and maxsum and return max sum
+function maxSubArray(nums) {
+
+    let maxSum = nums[0]
+    let currSum = 0
+    
+    for(const num of nums){
+        if(currSum < 0) currSum = 0
+        currSum += num
+        maxSum = Math.max(currSum, maxSum)
+    }
+
+    return maxSum
+
+};
+
+
 console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4])) // 6
 console.log(maxSubArray([1])) // 1
 console.log(maxSubArray([5,4,-1,7,8])) // 23
