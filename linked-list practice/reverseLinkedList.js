@@ -18,17 +18,17 @@ d.next = e
 e.next = f
 
 
-// Time: O(n)
-// Space: O(1)
+// Time: O(n) traversing through the entire linked list once
+// Space: O(1) space complexity is constant because we only need a fixed number of variables
 const reverseList = (head) => {
     let curr = head
     let prev = null
 
     while(curr){
-        let tempNext = curr.next
+        const next = curr.next
         curr.next = prev
         prev = curr
-        curr = tempNext
+        curr = next
     }
     return prev // "prev" will contain the new head of linked list
 }
