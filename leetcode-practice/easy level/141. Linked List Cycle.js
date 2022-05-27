@@ -35,24 +35,65 @@
  * }
  */
 
-/**
- * @param {ListNode} head
- * @return {boolean}
- */
+
+
+// const linkedListCycle = (head) => {
+
+//     let set = new Set()
+
+//     while(head){
+//         if(set.has(head)){
+//             return true
+//         }
+//         set.add(head)
+//         head = head.next
+//     }
+//     return false
+// }
+
+class Node {
+    constructor(val){
+        this.val = val
+        this.next = null
+    }
+}
+
+const a = new Node(3)
+const b = new Node(2)
+const c = new Node(0)
+const e = new Node(4)
+
+a.next = b
+b.next = c
+c.next = e
+e.next = b
+
+
+
+const x = new Node(1)
+
+
+
+
 
 const linkedListCycle = (head) => {
-
+    let curr = head
     let set = new Set()
 
-    while(head){
-        if(set.has(head)){
-            return true
-        }
-        set.add(head)
-        head = head.next
+    while(curr){
+        if(set.has(curr)) return true
+        set.add(curr)
+        curr = curr.next
     }
     return false
+
 }
+
+console.log(linkedListCycle(a))
+
+
+
+
 
 
 
