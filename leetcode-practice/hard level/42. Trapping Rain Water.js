@@ -10,7 +10,7 @@ var trap = function(height) {
     let result = 0
 
     while(left < right){
-        if(leftMax < rightMax){
+        if(leftMax < rightMax){ // going to shift the one that has the smaller max value
             left++ 
             leftMax = Math.max(leftMax, height[left])
             result += leftMax - height[left]
@@ -24,4 +24,53 @@ var trap = function(height) {
 
 }
 
-console.log(trappingRainWater([0,1,0,2,1,0,1,3,2,1,2,1])) // 6
+
+
+
+
+var trap1 = function(height) {
+
+    if(!height.length) return 0
+
+    let sum = 0
+    let wallHeight = 0  //current height of the wall
+    let maxHeight = height[0]
+    let maxHeightIndex = 0  // index of the max height of the array
+
+
+    //find the index of the highest height in height array
+    for(let i = 0; i < height.length; i++){
+        if(height[i] > maxHeight){
+            maxHeight = height[i]  // 3
+            maxHeightIndex = i     // 7
+        }
+    }
+    console.log(maxHeight,maxHeightIndex)
+
+
+    //loop over heights until the highest index
+    // if current height is taller than wall height, wallHeight = current height
+    // at each index, find the difference between the current height and the wallHeight
+
+    for(let i = 0 ; i <= maxHeightIndex; i++){
+        if(height[i] > wallHeight){
+            wallHeight = height[i]
+        } else {
+            sum += wallHeight - height[i]
+        }
+    }
+
+    //reset wallHeight
+    //repeat the above loop in opposite direction until you reach the highest index
+    wallHeight = 0
+    for(let i = height.length - 1; i >= maxHeightIndex; i-- ){
+        if(height[i] > wallHeight){
+            wallHeight = height[i]
+        } else {
+            sum += wallHeight - height[i]
+        } 
+    }
+    return sum
+}
+// console.log(trap([0,1,0,2,1,0,1,3,2,1,2,1])) // 6
+console.log(trap1([0,1,0,2,1,0,1,3,2,1,2,1])) // 6
