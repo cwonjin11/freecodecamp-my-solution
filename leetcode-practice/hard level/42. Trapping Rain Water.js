@@ -49,8 +49,8 @@ var trap1 = function(height) {
 
 
     //loop over heights until the highest index
-    // if current height is taller than wall height, wallHeight = current height
-    // at each index, find the difference between the current height and the wallHeight
+    // if current height which is height[i] is taller than wallHeight, wallHeight = height[i]
+    // at each index, find the difference between the current height( height[i]) and the wallHeight
 
     for(let i = 0 ; i <= maxHeightIndex; i++){
         if(height[i] > wallHeight){
@@ -59,6 +59,7 @@ var trap1 = function(height) {
             sum += wallHeight - height[i]
         }
     }
+    console.log(sum, "sum")
 
     //reset wallHeight
     //repeat the above loop in opposite direction until you reach the highest index
@@ -74,3 +75,4 @@ var trap1 = function(height) {
 }
 // console.log(trap([0,1,0,2,1,0,1,3,2,1,2,1])) // 6
 console.log(trap1([0,1,0,2,1,0,1,3,2,1,2,1])) // 6
+console.log(trap1([4,2,0,3,2,5])) // 9
