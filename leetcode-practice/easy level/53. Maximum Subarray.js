@@ -17,19 +17,6 @@
 // Input: nums = [5,4,-1,7,8]
 // Output: 23
 
-function maxSubArray(nums) {
-
-    let currentMaxSum = nums[0]
-    let maxSum = nums[0]
-    
-    for( let i = 1; i < nums.length; i++){
-        currentMaxSum = Math.max(currentMaxSum + nums[i], nums[i])
-        maxSum = Math.max(currentMaxSum, maxSum)
-    }
-
-    return maxSum
-
-};
 
 
 // if current sum is less than 0, we don't need  negative sum. we set currens sum as 0 again and add next element
@@ -48,6 +35,25 @@ function maxSubArray(nums) {
     return maxSum
 
 };
+
+
+
+function maxSubArray(nums) {
+
+    let currentMaxSum = nums[0]
+    let maxSum = nums[0]
+    
+    for( let i = 1; i < nums.length; i++){
+        currentMaxSum = Math.max(currentMaxSum + nums[i], nums[i])
+        maxSum = Math.max(currentMaxSum, maxSum)
+    }
+
+    return maxSum
+
+};
+
+
+
 
 
 console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4])) // 6
