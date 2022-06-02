@@ -75,7 +75,7 @@ var reverseList = function(head) {
     let prev = null // must store its previous element beforehand.
     let curr = head
     while(curr){ //(curr !== null)
-        let nextTemp = curr.next // need another pointer to store the next node before chaning the reference.
+        let nextTemp = curr.next // need another pointer to store the next node before changing the reference.
         curr.next = prev
         prev = curr
         curr = nextTemp
@@ -85,3 +85,20 @@ var reverseList = function(head) {
 };
 
 console.log(reverseList(A))
+
+
+
+//recursive
+var reverseList1 = function(head) {
+	// base case
+    if (head == null || head.next == null){
+        return head;
+    }
+	// go all the way to the end
+    let reversedListHead = reverseList1(head.next)
+	// add reverse myself
+    head.next.next = head;
+    head.next = null;
+	// go up
+    return reversedListHead
+};
