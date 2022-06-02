@@ -15,8 +15,19 @@
 // Input: nums = [3,1,2,10,1]
 // Output: [3,4,6,16,17]
 
+// T: O(n), S: O(1)
+var runningSum = function(nums) {
+    
+    for(let i = 1; i < nums.length; i++){
+        // nums[i] = nums[i] + nums[i - 1]
+        nums[i] += nums[i - 1]
+    }
+    
+    return nums
+};
 
 
+// T: O(n), S: O(n)
 var runningSum = function(nums) {
     let output = []
     let sum = 0
