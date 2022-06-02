@@ -24,6 +24,19 @@
 // Output: 17
 
 
+
+// using build-in reduce method
+var maximumWealth1 = function(accounts) {
+    let max = 0
+    for(let i = 0; i < accounts.length; i++){
+        max =  Math.max(accounts[i].reduce((acc,curr) => acc+curr, 0), max) 
+    }
+    return max
+};
+console.log(maximumWealth1([[1,2,3],[3,2,1]]))
+
+
+
 var maximumWealth = function(accounts) {
     
     let wealth = []
