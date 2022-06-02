@@ -49,3 +49,11 @@ var isPalindrome = function(s) {
 
 console.log(isPalindrome("A man, a plan, a canal: Panama"))
 console.log(isPalindrome(""))
+
+
+
+//regex version
+    // with regex
+    // let reverse = s.replace(/[^a-z0-9]/gi,"").split("").reverse().join('').toLowerCase()
+    // let original = s.replace(/[^a-z0-9]/gi,"").split("").join('').toLowerCase()
+    // return reverse === original
