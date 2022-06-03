@@ -21,14 +21,21 @@
 
 var groupAnagrams = function(strs) {
     let hash = {}
-     for(let str of strs){
+    for(let str of strs){
          let key = [...str].sort().join("")  /// this is the main point!!! sorting string!!
-         if(!hash[key]){
-             hash[key] = []  // set value as an empty arry
-         }
-         hash[key].push(str) // and push str to the relevant array
-     }
+         //let key = str.split("").sort().join("")
+        if(!hash[key]){
+            hash[key] = []  // set value as an empty arry
+        }
+        hash[key].push(str) // and push str to the relevant array
+    }
      
+    // let output = []
+    // for(const key in hash){
+    //     output.push(hash[key])
+    // }
+    //  return output
+    // or just simply Object.values(hash) => it returns array
      return Object.values(hash)
      
  };
