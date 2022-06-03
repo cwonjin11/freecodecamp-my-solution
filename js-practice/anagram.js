@@ -16,11 +16,28 @@ rearranging the letters of another, such as cinema, formed from iceman. */
 
 function validAnagram(str1, str2){
 
+    if(str1.length !== str2.length) return false 
+
     let hash = {}
     for(let char of str1){
-        console.log(char)
+       !hash[char] ? hash[char] = 1 : hash[char]++
     }
+
+    for(let char of str2){
+        if(hash[char]){
+            hash[char]--
+        } else {
+            return false
+        }
+    }
+    return true
+
 
 }
 
-console.log(validAnagram('anagram', 'nagaram'))
+console.log(validAnagram('anagram', 'nagaram')) //true
+console.log(validAnagram('awesome', 'awesom')) //false
+console.log(validAnagram('qwerty', 'qeywrt'))//true
+console.log(validAnagram('', '')) //true
+console.log(validAnagram('aaz', 'zza')) //false
+console.log(validAnagram("rat","car")) //false
