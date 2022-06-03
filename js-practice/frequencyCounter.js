@@ -33,6 +33,32 @@ const same = (arr1, arr2) => {
 }
 
 
-console.log(same([1,2,3], [4,1,9])) // true
-console.log(same([1,2], [1,9])) // false
-console.log(same([1,2,1], [4,4,1])) // false
+const same1 = (arr1, arr2) => {
+
+    if(arr1.length !== arr2.length) return false
+
+    let hash = {}
+
+    for(let num of arr1){
+        !hash[num**2] ? hash[num**2] = 1  : hash[num**2]++
+    }
+
+    for(let num of arr2){
+        if(hash[num]){
+            hash[num]--
+        } else {
+            return false
+        }
+    }
+    return true
+}
+
+
+
+
+// console.log(same([1,2,3], [4,1,9])) // true
+// console.log(same([1,2], [1,9])) // false
+// console.log(same([1,2,1], [4,4,1])) // false
+console.log(same1([1,2,3], [4,1,9])) // true
+console.log(same1([1,2], [1,9])) // false
+console.log(same1([1,2,1], [4,4,1])) // false
