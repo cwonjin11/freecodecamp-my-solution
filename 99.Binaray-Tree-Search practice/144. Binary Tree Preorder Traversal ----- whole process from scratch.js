@@ -39,11 +39,15 @@ var preorderTraversal = function(root) {
     while(stack.length > 0){
         let current = stack.pop()
         result.push(current.val)
-        if(current.right) stack.push(current.right)
-        if(current.left) stack.push(current.left)
-
+        if(current.right) {
+            stack.push(current.right)
+        }
+        if(current.left){
+            stack.push(current.left)
+        }
     }
-    return result
+  
+    // return result
 };
 console.log(preorderTraversal(a)) //a -> b -> d -> e -> c -> f
 
@@ -59,4 +63,4 @@ var preorderTraversal1 = function(root) {
 
 };
  
-console.log(preorderTraversal1(a)) //a -> b -> d -> e -> c -> f
+// console.log(preorderTraversal1(a)) //a -> b -> d -> e -> c -> f
