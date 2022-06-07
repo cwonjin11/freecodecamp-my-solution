@@ -75,7 +75,7 @@ const x = new Node(1)
 
 
 
-
+// using Hash Table set!
 const linkedListCycle = (head) => {
     let curr = head
     let set = new Set()
@@ -90,6 +90,25 @@ const linkedListCycle = (head) => {
 }
 
 console.log(linkedListCycle(a))
+
+
+// slow, faster pointers approach : Floyd's algorithm
+const linkedListCycle1 = (head) => {
+
+    let slow = head
+    let fast = head
+
+    while(fast && fast.next){
+        slow = slow.next
+        fast = fast.next.next
+
+        if(slow === fast) return true
+
+    }
+    return false
+}
+
+console.log(linkedListCycle1(a))
 
 
 
