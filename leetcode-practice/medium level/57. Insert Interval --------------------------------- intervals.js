@@ -28,7 +28,7 @@ var insert = function(intervals, newInterval) {
     // console.log(intervals) //[[1,3], [2,5], [6,9]]
     
     const result = [ intervals[0] ] //[[1,3]]
-       for(let i = 1; i < intervals.length; i++){
+    for(let i = 1; i < intervals.length; i++){
         let [ start, end ] = intervals[i] // 2 5,  6 9
         if( start <= result[result.length -1][1]){
             let lastEnd = result[result.length -1][1]
@@ -37,5 +37,27 @@ var insert = function(intervals, newInterval) {
             result.push(intervals[i])
         }
     }
+    return result
+};
+
+
+
+//Neetcode solution
+var insert = function(intervals, newInterval) {
+    
+    let result = []
+    for(let i = 0; i < intervals.length; i++){
+        if(newInterval[1] < intervals[i][0]){
+            result.push(newInterval)
+            result.push(...intervals.slice(i))  // add all of intervals element.
+            return result
+        } else if(newInterval[0] > intervals[i][1]){
+            result.push(intervals[i])
+        } else {
+            newInterval = [ Math.min(newInterval[0], intervals[i][0]), Math.max(newInterval[1], intervals[i][1]) ]
+        }
+    }
+    
+    result.push(newInterval)
     return result
 };
