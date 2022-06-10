@@ -24,6 +24,7 @@
 //     };
 
 
+//bucket sort
 var topKFrequent = function(nums, k) {
     
     let hash = {}
@@ -68,9 +69,14 @@ var topKFrequent2 = function(nums, k) {
     console.log(hash)
 
     let arr = []
-    for(const [key, value] of Object.entries(hash)){
-        arr.push([+key, value])
+    // for(const [key, value] of Object.entries(hash)){
+    //     arr.push([+key, value])
+    // }
+    for(let key in hash){
+        arr.push(+key, hash[key])
     }
+
+    //sorting arr decreasing order
     arr.sort((a,b) => (b[1] - a[1]))
 
     let result = []
