@@ -1,21 +1,69 @@
+
+
 var longestConsecutive = function(nums) {
-    if (nums == null || nums.length === 0) return 0;
-    
-    const set = new Set(nums);
-    let max = 0;
+  //edge case: no length or nums is null
+  if(nums.length === 0 || nums == null) return 0
   
-    for (let num of set) {
-      if (set.has(num - 1)) continue;  // make sure starting from the beginning of sequence
-  
-      let currNum = num;
-      let currMax = 1;
-  
-      while (set.has(currNum + 1)) {
-        currNum++;
-        currMax++;
+  let set = new Set(nums)
+  console.log(set)
+  //main function
+ 
+  let max = 0
+
+  for(const num of nums){
+      if(set.has(num - 1)){
+          continue
       }
-      max = Math.max(max, currMax);
-    }
+      let currNum = num
+      let currMax = 1
+
+      while(set.has(currNum + 1)){
+          currNum++
+          currMax++
+      }
+      max = Math.max(max, currMax)
+  }
+  return max
+
+}
+
+// console.log(longestConsecutive([100,4,200,1,3,2]))
+
+
+var longestConsecutive = function(nums) {
   
-    return max;
-  };
+  let set = new Set(nums)
+  let max = 0
+  
+  for( let num of nums){
+      if(!set.has(num-1)){ // set the starting point
+          let currMax = 0
+          while(set.has(num++)){
+              currMax++
+          }
+           max = Math.max(max, currMax)
+      }  
+     
+  }
+  return max
+  
+};
+
+
+var longestConsecutive = function(nums) {
+  
+  let set = new Set(nums)
+  let longest = 0
+  
+  for( let num of nums){
+      if(!set.has(num-1)){ // set the starting point
+          let length = 0
+          while(set.has(num + length)){
+              length++
+          }
+      longest = Math.max(longest, length)
+      }   
+  }
+  return longest
+};
+

@@ -33,28 +33,30 @@
 //     return result
 // }
 
+
+//best solution
+//Time: O(n)
+//Space: O(1) as we do not requires extra space 
 var maxArea = function(height) {
-
-    // x-axis = index of arr
-    // y-axix = arr[index] or element
-
-    //x-axis
-    let result = 0
+    //initialize max area to zero
+    let max = 0
+    //initialize left and right to extreme ends of the array
     let left = 0
     let right = height.length - 1
-
+    // while left < right, loop
     while(left < right){
-        // define area calculation. x-axis * y-axis where min of y-axis. not max. if max, then overflow
-        let area = (right-left) * Math.min(height[right], height[left])
-        // update result with max area
-        result = Math.max(area, result)
-        // then, move pointers either left or right by below conditions
-        if(height[left] > height[right]) right--
-        else left++
-        
+        // calculate current area and update max area
+        let currArea = Math.min(height[left], height[right]) * (right - left)
+        max = Math.max(max, currArea)
+        // take decision regarding which pointer to move 
+        if(height[left] < height[right]) {
+            left++
+        } else{ 
+            right--
+        }
     }
-    return result
-
+    // return the maximum area
+    return max
 }
 
 
@@ -63,3 +65,25 @@ var maxArea = function(height) {
 
 console.log(maxArea([1,8,6,2,5,4,8,3,7])) //=> 49
 console.log(maxArea([1,1])) //=> 1
+
+
+
+
+//T: O(n^2)
+//S: O(1)
+var maxArea = function(height) {
+    // initialize max to zero
+    let max = 0
+    // a for loop for the left pointer
+    for(let i = 0; i < height.length; i++){
+        // a for loop for the right pointer
+        for(let j = i+1; j < height.length; j++){
+            let currArea = Math.min(height[i], height[j]) * (j - i)
+             //update maximum area
+            max = Math.max(max, currArea)
+        }
+    }
+   //return the maximum area
+    return max
+  
+};
