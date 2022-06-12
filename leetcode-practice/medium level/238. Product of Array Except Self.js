@@ -54,4 +54,28 @@ const productExceptSelf = (nums) => {
     return result
 }
 
-console.log(productExceptSelf([1,2,3,4])) //=> [24,12,8,6]
+// console.log(productExceptSelf([1,2,3,4])) //=> [24,12,8,6]
+
+
+// Time Limit Exceeded 
+var productExceptSelf1 = function(nums) {
+    let copied = nums.slice()
+    let result = []
+    let i = 0
+    while(nums){
+        copied.splice(i,1)
+        console.log(copied[i])
+            // console.log(copied, "copied")
+        result.push(copied.reduce((acc, curr)=> acc * curr, 1))
+        i++
+        copied = [...nums]
+        
+        if(i > nums.length - 1) break
+    }
+   
+
+    return result
+
+};
+
+console.log(productExceptSelf1([1,2,3,4]))
