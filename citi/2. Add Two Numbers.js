@@ -69,13 +69,12 @@ var addTwoNumbers = function(l1, l2) {
 
         head.next = new ListNode(sum)
         head = head.next
-        
+
         sum = carry
         carry = 0
     }
 
-
-    return dummy.next
+    // return dummy.next
 }
 
 console.log(addTwoNumbers(a, x)) //2->4->3, 5->6->4 ==>7->0->8
