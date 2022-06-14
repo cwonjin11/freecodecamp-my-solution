@@ -16,6 +16,27 @@ Output: 9
 
 // console.log(longestConsecutive([100,4,200,1,3,2]))
 
+var longestConsecutive = function(nums) {
+    //edge case: no length or nums is null
+    if(nums.length === 0 || nums === null) return 0
+    
+    let set = new Set(nums) // remove dulicated number
+    let max = 0
+    
+    for(let num of nums){
+      //we need to find the starting point. if set does not have num - 1, that is our starting point
+      if(!set.has(num - 1)){ //set the starting point here
+          let curr = 0
+          while(set.has(num)){ // increment num by 1 while set has num // question? n^2 time complexitiy?
+              num++
+              curr++
+          }
+      max = Math.max(curr, max)
+      }
+    }
+    return max
+};
+
 
 var longestConsecutive = function(nums) {
     //edge case: no length or nums is null
@@ -30,7 +51,7 @@ var longestConsecutive = function(nums) {
             while(set.has(num++)){
                 currMax++
             }
-             max = Math.max(max, currMax)
+        max = Math.max(max, currMax)
         }  
     }
     return max
