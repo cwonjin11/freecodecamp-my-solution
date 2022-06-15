@@ -4,7 +4,7 @@ var isSymmetric = function(root) {
         return true;
     }
 
-    // // Check if tree s & t are mirroring each other
+    // Check if tree s & t are mirroring each other
     function isMirror(s, t) {
         if (!s && !t) {
             return true; // Both nodes are null, ok

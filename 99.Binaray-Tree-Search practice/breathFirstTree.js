@@ -1,3 +1,6 @@
+// Breath first travelsal algorith : Queue
+
+
 class Node {
     constructor(val){
         this.val = val
@@ -19,8 +22,15 @@ b.left = d
 b.right = e
 c.right = f
 
+/*
+        a
+       / \
+      b   c
+     / \   \
+    d   e    f
+*/
 
-const breathFirstTree = (root) => {
+const breathFirstTraversal = (root) => {
 
     if(root === null) return []
 
@@ -44,4 +54,4 @@ const breathFirstTree = (root) => {
 
 }
 
-console.log(breathFirstTree(a)) // a,b,c,d,e,f
+console.log(breathFirstTraversal(a)) // a,b,c,d,e,f

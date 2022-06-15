@@ -50,16 +50,16 @@
 
 // time O(N) space O(N)
 var numIdenticalPairs = function(nums) {
-    const map = {}
+    const hash = {}
     let count = 0
     
-    for (const number of nums) {
+    for (const num of nums) {
 
-        if(!map[number]){
-            map[number] = 1
+        if(!hash[num]){
+            hash[num] = 1
         } else {
-            count += map[number]
-            map[number]++
+            count += hash[num]
+            hash[num]++
         }
     }
     // console.log(map)

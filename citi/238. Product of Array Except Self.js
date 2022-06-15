@@ -21,6 +21,30 @@
 //right = [24,12,4,1]
 //result = [24,12,8,6]
 
+
+var productExceptSelf = function(nums) {
+    let left = new Array(nums.length).fill(0)
+    left[0] = 1
+    let right = new Array(nums.length).fill(0)
+    right[right.length - 1] = 1
+
+    for(let i = 1; i < left.length; i++){
+        left[i] = left[i - 1] * nums[i - 1]
+    }
+    console.log(left)
+    for(let i = right.length - 2; i >= 0; i--){
+        right[i] = right[i + 1] * nums[i + 1]
+    }
+    console.log(right)
+    
+    for(let i = 0; i < nums.length; i++){
+        nums[i] = left[i] * right[i]
+    }
+    return nums
+};
+
+
+
 const productExceptSelf = (nums) => {
 
     let leftProduct = []

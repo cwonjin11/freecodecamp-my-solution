@@ -24,3 +24,5 @@ function averagePair(arr, targetAve){
 }
 
 console.log(averagePair([1,2,3], 2))
+console.log(averagePair([1,2,3], 2.5))
+console.log(averagePair([], 2.5))

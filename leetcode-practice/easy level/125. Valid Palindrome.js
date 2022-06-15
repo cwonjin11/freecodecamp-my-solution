@@ -23,6 +23,33 @@
 
 
 var isPalindrome = function(s) {
+    if (s.length < 1) return true;
+    
+    // function: remove all extra chars 
+    const isAlphaNum = c => (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9');
+    //filter alpha or num by passing above function
+    const a = s.toLowerCase().split('').filter(e => isAlphaNum(e))
+    console.log(a)    
+
+    // for (let i = 0;i < a.length/2;i++) {
+    //     if(a[i] !== a[a.length - 1 - i]) return false;
+    // }
+    let left = 0
+    let right = a.length - 1
+    while(left < right){
+        if(a[left] !== a[right]){
+            return false
+        } else {
+            left++
+            right--
+        }
+    }
+    return true;
+};
+
+
+
+var isPalindrome = function(s) {
 
     //edge case
     if(s.length === 0) return true 

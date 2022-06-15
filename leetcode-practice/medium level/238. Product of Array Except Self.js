@@ -16,10 +16,39 @@
 
 
 /// before start!!!!!!!!! important to think about this way!!!
-//nums = [1,2,3,4]
-//left = [1,1,2,6]
-//right = [24,12,4,1]
-//result = [24,12,8,6]
+//1st step: nums = [1,2,3,4]
+//2nd step: result = [24,12,8,6]
+
+//3rd step: left = [1,1,2,6]  set left[0] as 1
+//4th step: right = [24,12,4,1] set right[right.length - 1] as 1
+// final step: left[i] * right[i] == result[i]
+
+
+
+var productExceptSelf = function(nums) {
+    let left = new Array(nums.length).fill(0)
+    left[0] = 1
+    let right = new Array(nums.length).fill(0)
+    right[right.length - 1] = 1
+
+    for(let i = 1; i < left.length; i++){
+        left[i] = left[i - 1] * nums[i - 1]
+    }
+    console.log(left)
+    for(let i = right.length - 2; i >= 0; i--){
+        right[i] = right[i + 1] * nums[i + 1]
+    }
+    console.log(right)
+    
+    for(let i = 0; i < nums.length; i++){
+        nums[i] = left[i] * right[i]
+    }
+    return nums
+};
+
+
+
+
 
 const productExceptSelf = (nums) => {
 
