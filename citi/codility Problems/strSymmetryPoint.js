@@ -4,9 +4,11 @@ function solution(S) {
         return -1;
     } else {
         let midpoint = Math.floor(S.length / 2);
-        let left = S.substr(0, midpoint);
-        let right = S.substr(midpoint + 1, midpoint);  /// check this line again 
+        let left = S.substr(0, midpoint); //start,end ; end not included
+        let right = S.substr(midpoint + 1);  /// check this line again 
+        console.log(right)
         right = right.split("").reverse().join("");
+        console.log(right)
         if (left === right) {
             return midpoint;
         } else {
@@ -15,3 +17,4 @@ function solution(S) {
     }
 }
 console.log(solution("racecar")) // 3
+console.log(solution("abcdeeedcba")) // 5
