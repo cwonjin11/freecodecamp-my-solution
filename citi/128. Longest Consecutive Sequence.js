@@ -31,7 +31,7 @@ var longestConsecutive = function(nums) {
             num++
             curr++
         }
-    max = Math.max(curr, max)
+      max = Math.max(curr, max) // inside of if statement, outside of while statement
     }
   }
   return max
@@ -51,7 +51,7 @@ var longestConsecutive = function(nums) {
           while(set.has(num++)){
               currMax++
           }
-      max = Math.max(max, currMax)
+        max = Math.max(max, currMax) // inside of if statement, outside of while statement
       }  
   }
   return max

@@ -48,6 +48,24 @@
 //     return x === 0 && y === 0
 // }
 
+
+
+var judgeCircle = function(moves) {
+    let hash = {}
+    for(const move of moves){
+        !hash[move] ? hash[move]  =  1  : hash[move]++
+    }
+    console.log(hash)
+
+    return hash["U"] === hash["D"] && hash["R"] === hash["L"]
+   
+};
+
+console.log(judgeCircle("UDLRR"))
+console.log(judgeCircle("UDLR"))
+
+//or
+
 var judgeCircle = function(moves) {
 
     let hash = {}

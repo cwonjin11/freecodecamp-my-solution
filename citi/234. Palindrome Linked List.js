@@ -60,14 +60,15 @@ const reverse = (head) => {
 
 const isPalindrome1 = (head) => {
 
+    // we need to find half node of linked list. Here I used slow & fast approach to find the half node
     let slow = head
     let fast = head
     while(fast && fast.next){
         slow = slow.next
         fast = fast.next.next
     }
-    let half = reverse(slow)
-    while(half){
+    let half = reverse(slow) // here we use reverse method above
+    while(half){// don't need to check head is null since half is always going to be shorter than head
         if(head.val !== half.val){
             return false
         }
