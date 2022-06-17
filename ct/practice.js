@@ -78,9 +78,10 @@ var findMinArrowShots = function(points) {
          if( start <= prevEnd) continue // 1<4 t 7<=6? f 10<6 f
          count++ // 2
          prevEnd = points[i][1] //6
-     }
-     return count
-};
+        }
+        return count
+    };
+    console.log(findMinArrowShots([[10,16], [2,4], [1,6], [7,12], [13,14]])) //3
 
 //  intervals.sort((a,b) => a[1] - b[1])
 //  let count = 0
@@ -97,7 +98,6 @@ var findMinArrowShots = function(points) {
 //  }
 //  return count
 
-console.log(findMinArrowShots([[10,16], [2,4], [1,6], [7,12], [13,14]])) //3
 // console.log(burstBalloons([[10,16], [2,4], [1,6], [7,12]])) //2
 // console.log(burstBalloons([[10,16], [2,8], [1,9], [7,12]])) //2
 // console.log(burstBalloons([[10,16]])) //1
