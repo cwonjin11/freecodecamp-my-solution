@@ -27,7 +27,23 @@
 // - Shoot an arrow at x = 4, bursting the balloons [3,4] and [4,5].
 
 
+var findMinArrowShots = function(points) {
+    points.sort((a,b) => a[1] - b[1])
 
+    let arrow = 1
+    let prevEnd = points[0][1]  
+    
+     for(let i = 1; i < points.length; i++){
+         let start = points[i][0]
+         if( prevEnd < start) {
+             arrow++
+             prevEnd = points[i][1]
+             }
+     }
+     return arrow
+};
+
+//or
 var findMinArrowShots = function(points) {
    
     points.sort((a,b) => a[1] - b[1])
@@ -45,3 +61,22 @@ var findMinArrowShots = function(points) {
 };
 
 
+//or
+var findMinArrowShots = function(points) {
+    points.sort((a,b) => a[0] - b[0])
+    let prev = null
+    let count = 0
+
+    for(let el of points){
+        let start = el[0]
+        let end = el[1]
+        // console.log(el)
+        if( prev == null || prev < start){
+            count++
+            prev = end
+        } else {
+            prev = Math.min(prev, end)
+        }
+    }
+    return count
+}
