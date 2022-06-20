@@ -28,10 +28,10 @@
 
 
 var findMinArrowShots = function(points) {
-    points.sort((a,b) => a[1] - b[1])
+    points.sort((a,b) => a[1] - b[1]) // sort by the end of element to find overlapped points
 
-    let arrow = 1
-    let prevEnd = points[0][1]  
+    let arrow = 1  // at least one arrow needed
+    let prevEnd = points[0][1]  // set the first End from sorted array
     
      for(let i = 1; i < points.length; i++){
          let start = points[i][0]
