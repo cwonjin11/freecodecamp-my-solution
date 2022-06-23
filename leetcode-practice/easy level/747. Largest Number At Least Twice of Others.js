@@ -1,8 +1,5 @@
 // You are given an integer array nums where the largest integer is unique.
-
 // Determine whether the largest element in the array is at least twice as much as every other number in the array. If it is, return the index of the largest element, or return -1 otherwise.
-
- 
 
 // Example 1:
 
@@ -36,6 +33,23 @@ var dominantIndex = function(nums) {
         }
     }
 };
+
+//or
+var dominantIndex = function(nums) {
+    if(nums.length == 1) return 0
+    let largest = Math.max(...nums)
+    let largestIndex = nums.indexOf(largest)
+    let half = largest / 2
+
+
+
+    nums.splice(nums.indexOf(largest),1)
+    nums.sort((a,b) => b - a)
+
+   return nums[0] <= half ?  largestIndex  : -1
+};
+
+
 console.log(dominantIndex([3,6,1,0])) // 1
 console.log(dominantIndex([1,2,3,4])) // -1
 console.log(dominantIndex([1])) // 0
