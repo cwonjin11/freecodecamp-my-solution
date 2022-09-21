@@ -16,6 +16,6 @@ const sumOfUniq = (arr) => {
    return result
 }
 
-console.log(sumOfUniq([1,2,2,3]))
+console.log(sumOfUniq([1,2,2,3])) 
 console.log(sumOfUniq([1,2,2,2,3,4]))
 console.log(sumOfUniq([1,2,2,2,3,3,4]))
